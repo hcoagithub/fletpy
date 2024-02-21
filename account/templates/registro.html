@@ -1,3 +1,9 @@
 <h1> Registrate </h1>
 
-{{form.as_p}}
+<form method="post" enctype="multipart/">
+    {% csrf_token %}
+    {{form.as_p}}
+
+<button type="submit" class="btn btn-primary" value="Register">Register</button>
+
+</form>

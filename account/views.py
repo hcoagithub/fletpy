@@ -25,7 +25,7 @@ def user_login(request):
         if user is not None:
             login(request, user)
             # Redirigir al usuario a la página deseada después del inicio de sesión exitoso
-            return redirect('account:resgistro')  # Ajusta 'dashboard' según tus necesidades
+            return redirect('account:registro')  # Ajusta 'dashboard' según tus necesidades
         else:
             # Si la autenticación falla, puedes manejarlo de alguna manera, por ejemplo, mostrar un mensaje de error
             return render(request, 'login.html', {'error_message': 'Nombre de usuario o contraseña incorrectos'})
